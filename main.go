@@ -43,12 +43,12 @@ func enigmaEncrypt(plaintext string, rotors ...rotor) string {
 			// Rotate rotors before encryption
 			rotateRotors(&rotors)
 
-			// Pass the character through the rotors from right to left
+		
 			char = substitute(char, rotors[2])
 			char = substitute(char, rotors[1])
 			char = substitute(char, rotors[0])
 
-			// Pass the character through the reflector
+			
 			char = reflector(char)
 
 			// Pass the character through the rotors from left to right
